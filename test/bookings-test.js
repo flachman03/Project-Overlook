@@ -39,5 +39,9 @@ describe('Booking', function() {
     expect(booking.roomsTakenByDate('29/09/2019')).to.deep.equal([50, 79, 13, 51])
   })
 
-  
+  it('should find the percentage of open rooms', function() {
+    expect(booking.percentageByDate('29/09/2019')).to.equal(98)
+  })
+
+
 })

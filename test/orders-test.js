@@ -43,4 +43,8 @@ describe.skip('Order', function() {
   it('should return total spent for all time by a specific customer', function() {
     expect(order.customerTotalSpent(97)).to.equal(43.4)
   })
+
+  it('should have a list of the food items and their prices', function() {
+    expect(Object.keys(order.itemsAndPrices()).length).to.equal(76)
+  })
 })

@@ -1,19 +1,93 @@
 @import './variables.scss';
+@import './mixins.scss';
 
-body {
-  height: 100vh;
+* {
+  box-sizing: border-box;
 }
 
+/*------------Header------------*/
 header {
-  height: 20vh;
-}
-
-nav {
   height: 10vh;
+  display: flex;
 }
 
-main {
-  height: 70vh;
-  background-color: $background-primary;
+#header__company-info {
+  flex: 2;
 }
 
+#header__customer-name {
+  flex: 3;
+}
+
+.nav__nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.nav-list__tab {
+  flex: 1;
+  background: none;
+  color: #222;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.current {
+  background: #9BC1CE;
+  color: #222;
+}
+
+.tab-content {
+  display: none;
+  background: #9BC1CE;
+  padding: 15px;
+}
+
+.tab-content.current{
+  display: inherit;
+}
+
+.nav-list__svg {
+  height: 80px;
+  width: 80px;
+}
+
+.tab-content__rooms {
+  font-size: 36px;
+}
+
+/*d---------Splash Page-----------*/ 
+
+.header__splash-page {
+  @include dimension(100%, 100%);
+  position: absolute;
+  z-index: 4;
+  background: repeating-linear-gradient(#E1E1E1, #9BC1CE);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  right: 1px;
+  bottom: 5px;
+}
+
+.splash-page__header {
+  color: #7E7F7E;
+  animation: grow 2s ease-out forwards;
+  text-shadow: 3px 2px 1px rgb(165, 167, 165);
+}
+
+.header__load-button {
+  animation: slide-right 2s ease-out forwards;
+  padding: 10px 30px;
+  font-size: 100px;
+  position: relative;
+  right: 700px;
+  border: none;
+  background: initial;
+  &:hover {
+    cursor: pointer;
+  }
+}

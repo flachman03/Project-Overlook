@@ -1,3 +1,5 @@
+import Data from "./data";
+
 class Booking {
   constructor(data) {
     this.data = data
@@ -27,6 +29,11 @@ class Booking {
   roomsTakenByDate(date) {
     let rooms = this.findByDate(date)
     return rooms.map(room => room.roomNumber)
+  }
+
+  percentageByDate(date) {
+    let currentBookings = this.findByDate(date)
+    return ((this.data.length - currentBookings.length) / this.data.length) * 100
   }
 }
 

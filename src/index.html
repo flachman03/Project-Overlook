@@ -4,18 +4,52 @@
     <title>Webpack Starter Kit</title>
   </head>
   <body>
-    <header></header>
+      <section class="header__splash-page">
+          <h1 class="splash-page__header">Welcome!</h1>
+          <button class="header__load-button">Start</button>
+        </section>
+    <header>
+      <div id="header__company-info">
+        <h1>Photon Booking</h1>
+        <h3>Travelling Light</h3>
+      </div>
+      <h2 id="header__customer-name">No Current Customer</h2>
+    </header>
     <nav>
-      <button class="nav__nav-btn" id="nav__dashboard-btn">Dashboard</button>
-      <button class="nav__nav-btn" id="nav__customer-btn">Customer</button>
-      <button class="nav__nav-btn" id="nav__order-btn">Orders</button>
-      <button class="nav__nav-btn" id="nav__room-btn">Rooms</button>
+      <ul class="nav__nav-list">
+        <li class="nav-list__tab current" id="nav-list__dashboard" data-tab="tab-1">
+          <img src="./images/home.svg" alt="" class="nav-list__svg">
+        </li>
+        <li class="nav-list__tab" id="nav-list__customer" data-tab="tab-2">
+          <img src="./images/specialist-user.svg" alt="" class="nav-list__svg">
+        </li>
+        <li class="nav-list__tab" id="nav-list__booking" data-tab="tab-3">
+          <img src="./images/open-book.svg" alt="" class="nav-list__svg">
+        </li>
+        <li class="nav-list__tab" id="nab-list__order" data-tab="tab-4">
+            <img src="./images/breakfast.svg" alt="" class="nav-list__svg">
+        </li>
+      </ul>
     </nav>
-    <main>
-      <section class="main__section" id="main__dashboard-section">Dashboard</section>
-      <section class="main__section" id="main__customer-section">Customer</section>
-      <section class="main__section" id="main__orders-section">Orders</section>
-      <section class="main__section" id="main__rooms-section">Rooms</section>
+    <main class="container">
+      <section id="tab-1" class="tab-content current">
+        <p class="tab-content__rooms">Total Rooms Available for <span id="tab-1__date"></span>: <span id="tab-1__insert-data"></span></p>
+        <p class="tab-content__debts">Total Daily Debts: <span id="tab-1__debts"></span></p>
+      </section>
+      <section id="tab-2" class="tab-content">
+        <form>
+          <label for="tab-2__customer-search"></label>
+          <input type="text" name="tab-2__customer-search" id="tab-2__customer-search">
+          <button id="tab-2__creat-customer-btn">Create New Customer</button>
+          <button id="tab-2__customer-search-btn">Search For Customer</button>
+        </form>
+      </section>
+      <section id="tab-3" class="tab-content">
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </section>
+      <section id="tab-4" class="tab-content">
+        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </section>
     </main>
   </body>
 </html>
